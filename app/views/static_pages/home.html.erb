@@ -1,0 +1,15 @@
+<h1>quelqu'un</h1>
+
+<%= form_with(url: home_path, method: :get, local: true) do %>
+  <%= label_tag :user_id, "ID" %>
+  <%= text_field_tag :user_id %>
+  <br>
+  <%= submit_tag "cherche" %>
+<% end %>
+
+
+<% if @urls %>
+  <% @urls.each do |url| %>
+    <%= image_tag url, width: 300 %>
+  <% end %>
+<% end %>
